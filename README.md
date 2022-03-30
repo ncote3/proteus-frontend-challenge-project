@@ -33,4 +33,4 @@ Given the below requirements, implement a User Interface that allows a user to s
 ## Grading Criteria
 - Correctness: Does your solution meet the requirements? Does it work?
 - Code Quality & Architecture: Does your solution utilize best practices? Is it readable and well organized? Consider adding a few tests.
-- Usability: While we have included a mockup, we do not expect a pixel perfect implementation of the design. However, e will be grading your project on basic UI/UX principles.
+- Usability: While we have included a mockup, we do not expect a pixel perfect implementation of the design. However, we will be grading your project on basic UI/UX principles.
