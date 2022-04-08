@@ -20,7 +20,7 @@ Given the below requirements, implement a User Interface that allows a user to s
 2. Implement a slider component that allows a user to select a weight range. The minimum selectable weight should read "Under 70" and the maximum weight should read "Over 295." The slider can be moved in increments of 15.
 3. Implement a slider component that allows a user to select a height range with a minimum of 5'2" and a maximum of 6'10" in increments of 4".  
 4. Implement a set of radio buttons that allows a user to select which sport they participate in. A user can only select one sport.
-5. Implement a set of radio buttons that allows a user to select which position they particpate in. A user can only select a position if they have selected a sport. 
+5. Implement a set of radio buttons that allows a user to select which position they participate in. A user can only select a position if they have selected a sport. 
 6. When a user clicks "Apply filters" log to the console a JSON blob that describes the current state of the filters.
 
 ### Technical Details
