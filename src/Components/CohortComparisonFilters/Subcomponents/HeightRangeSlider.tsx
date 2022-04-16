@@ -3,6 +3,8 @@ import { Range } from "../../../types";
 import RangeSlider from "../../Common/RangeSlider/RangeSlider";
 
 const INCHES_IN_FEET = 12;
+const FIVE_FEET_TWO_INCHES_IN_INCHES = 62;
+const SIX_FEET_TEN_INCHES_IN_INCHES = 82;
 
 interface Props {
   range: Range;
@@ -33,6 +35,12 @@ const HeightRangeSlider = (props: Props) => {
       range={range}
       updateRange={updateRange}
       toolTipFormatter={feetInchesFormatter}
+      rangeParameters={{
+        // using named constants to clarify conversion
+        upper: SIX_FEET_TEN_INCHES_IN_INCHES,
+        lower: FIVE_FEET_TWO_INCHES_IN_INCHES,
+        increment: 4,
+      }}
     />
   );
 };

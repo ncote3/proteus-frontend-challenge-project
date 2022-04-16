@@ -15,6 +15,12 @@ const WeightRangeSlider = (props: Props) => {
       title="Weight Range (lbs)"
       range={range}
       updateRange={updateRange}
+      rangeParameters={{
+        // values are in lbs
+        upper: 295,
+        lower: 70,
+        increment: 15,
+      }}
     />
   );
 };

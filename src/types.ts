@@ -10,3 +10,9 @@ export interface Sport {
   name: string;
   positions: string[];
 }
+
+export interface RangeParameters {
+  upper: number;
+  lower: number;
+  increment: number;
+}
