@@ -27,7 +27,7 @@ const SportPositionSelectionSection = (props: Props) => {
       setSelection={updateSelectedSport}
       showAllParameters={{
         showAllText: "sports",
-        showAllTrigger: 4,
+        showAllTrigger: 12,
       }}
     />
   );
@@ -48,8 +48,14 @@ const SportPositionSelectionSection = (props: Props) => {
     );
   };
 
+  const selectionContainerStyles: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    rowGap: "4em",
+  };
+
   return (
-    <div>
+    <div style={selectionContainerStyles}>
       {_renderSportSelection()}
       {_renderPositionSelection()}
     </div>

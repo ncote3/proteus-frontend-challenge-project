@@ -50,12 +50,17 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <CohortComparisonFilters
-        initialWeightRange={initialWeightRange}
-        initialHeightRange={initialHeightRange}
-        sportsList={sportsList}
-      />
+    <div
+      className="App"
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <div style={{ width: "50%" }}>
+        <CohortComparisonFilters
+          initialWeightRange={initialWeightRange}
+          initialHeightRange={initialHeightRange}
+          sportsList={sportsList}
+        />
+      </div>
     </div>
   );
 }

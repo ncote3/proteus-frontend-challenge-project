@@ -18,9 +18,13 @@ const CohortComparisonFilters = (props: Props) => {
   const [sportSelection, updateSportSelection] = useState<string>("All");
   const [positionSelection, updatePositionSelection] = useState<string>("");
 
+  const titleStyles: React.CSSProperties = {
+    textAlign: "left",
+  };
+
   return (
     <div>
-      <h2>Cohort Comparison Filters</h2>
+      <h2 style={titleStyles}>Cohort Comparison Filters</h2>
       {/* <WeightRangeSlider range={weightRange} updateRange={updateWeightRange} />
       <HeightRangeSlider range={heightRange} updateRange={updateHeightRange} /> */}
       <SportPositionSelectionSection

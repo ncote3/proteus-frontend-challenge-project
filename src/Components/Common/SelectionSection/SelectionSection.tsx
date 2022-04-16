@@ -21,13 +21,33 @@ const SelectionSection = (props: Props) => {
   } = props;
 
   const isShowAllThresholdMet =
-    showAllParameters && showAllParameters.showAllTrigger > options.length;
+    showAllParameters && showAllParameters.showAllTrigger < options.length;
 
   const [showAll, setShowAll] = useState<boolean>(false);
 
+  const selectionSectionStyles: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    rowGap: ".75em",
+  };
+  const titleStyles: React.CSSProperties = {
+    fontWeight: "500",
+    alignSelf: "flex-start",
+  };
+  const optionsContainerStyles: React.CSSProperties = {
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    justifyItems: "start",
+    rowGap: ".5em",
+  };
+  const radioContainerStyles: React.CSSProperties = {};
+  const radioStyles: React.CSSProperties = {
+    backgroundColor: "white",
+  };
+
   const _renderRadios = (options: string[]) =>
     options.map((option) => (
-      <div>
+      <div style={radioContainerStyles}>
         <input
           type="radio"
           id={option}
@@ -35,6 +55,7 @@ const SelectionSection = (props: Props) => {
           value={option}
           onChange={(e) => setSelection(e.target.value)}
           checked={option === currentSelection}
+          style={radioStyles}
         />
         <label htmlFor={option}>{option}</label>
       </div>
@@ -79,9 +100,9 @@ const SelectionSection = (props: Props) => {
   };
 
   return (
-    <div>
-      <div>{title}</div>
-      {_renderOptions()}
+    <div style={selectionSectionStyles}>
+      <div style={titleStyles}>{title}</div>
+      <div style={optionsContainerStyles}>{_renderOptions()}</div>
       {_renderShowMoreButton()}
     </div>
   );
