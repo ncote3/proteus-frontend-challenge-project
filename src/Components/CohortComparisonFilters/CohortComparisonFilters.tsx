@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Range, Sport } from "../../types";
 import HeightRangeSlider from "./Subcomponents/HeightRangeSlider";
 import SportPositionSelectionSection from "./Subcomponents/SportPositionSelectionSection";
@@ -13,25 +13,37 @@ interface Props {
 const CohortComparisonFilters = (props: Props) => {
   const { initialWeightRange, initialHeightRange, sportsList } = props;
 
+  const [weightRange, updateWeightRange] = useState<Range>(initialWeightRange);
+  const [heightRange, updateHeightRange] = useState<Range>(initialHeightRange);
+  const [sportSelection, updateSportSelection] = useState<string>("All");
+  const [positionSelection, updatePositionSelection] = useState<string>("");
+
   return (
     <div>
       <h2>Cohort Comparison Filters</h2>
-      <WeightRangeSlider
-        range={undefined as unknown as Range}
-        updateRange={function (range: Range): void {
-          throw new Error("Function not implemented.");
-        }}
+      <WeightRangeSlider range={weightRange} updateRange={updateWeightRange} />
+      <HeightRangeSlider range={heightRange} updateRange={updateHeightRange} />
+      <SportPositionSelectionSection
+        sportsList={sportsList}
+        selectedSport={sportSelection}
+        updateSelectedSport={updateSportSelection}
+        selectedPosition={positionSelection}
+        updateSelectedPosition={updatePositionSelection}
       />
-      <HeightRangeSlider
-        range={undefined as unknown as Range}
-        updateRange={function (range: Range): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-      <SportPositionSelectionSection sportsList={sportsList} />
       <div>
-        <div onClick={() => null}>Cancel</div>
-        <div onClick={() => null}>Apply Filters</div>
+        <div
+          onClick={() =>
+            console.info(
+              weightRange,
+              heightRange,
+              sportSelection,
+              positionSelection
+            )
+          }
+        >
+          Cancel
+        </div>
+        <div onClick={() => console.info("Cancel")}>Apply Filters</div>
       </div>
     </div>
   );

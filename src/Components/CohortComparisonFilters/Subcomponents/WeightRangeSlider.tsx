@@ -10,7 +10,13 @@ interface Props {
 const WeightRangeSlider = (props: Props) => {
   const { range, updateRange } = props;
 
-  return <RangeSlider range={range} updateRange={updateRange} />;
+  return (
+    <RangeSlider
+      title="Weight Range (lbs)"
+      range={range}
+      updateRange={updateRange}
+    />
+  );
 };
 
 export default WeightRangeSlider;

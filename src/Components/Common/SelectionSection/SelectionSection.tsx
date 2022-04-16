@@ -1,8 +1,10 @@
 import React from "react";
 
 interface Props {
-  selection: string[];
+  options: string[];
+  currentSelection: string;
   setSelection: (selection: string) => void;
+  placeHolderMessage?: string;
 }
 
 const SelectionSection = (props: Props) => {
