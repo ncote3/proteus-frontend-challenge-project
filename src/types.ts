@@ -16,3 +16,8 @@ export interface RangeParameters {
   min: number;
   step: number;
 }
+
+export interface ShowAllParameters {
+  showAllText: string;
+  showAllTrigger: number;
+}

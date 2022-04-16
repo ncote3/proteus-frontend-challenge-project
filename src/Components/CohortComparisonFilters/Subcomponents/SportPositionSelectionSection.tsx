@@ -21,9 +21,14 @@ const SportPositionSelectionSection = (props: Props) => {
 
   const _renderSportSelection = () => (
     <SelectionSection
-      options={sportsList.map((sport) => sport.name)}
+      title="Sport"
+      options={["All", ...sportsList.map((sport) => sport.name)]}
       currentSelection={selectedSport}
       setSelection={updateSelectedSport}
+      showAllParameters={{
+        showAllText: "sports",
+        showAllTrigger: 4,
+      }}
     />
   );
 
@@ -34,6 +39,7 @@ const SportPositionSelectionSection = (props: Props) => {
 
     return (
       <SelectionSection
+        title="Position"
         options={currentSportObject?.positions || []}
         currentSelection={selectedPosition}
         setSelection={updateSelectedPosition}
