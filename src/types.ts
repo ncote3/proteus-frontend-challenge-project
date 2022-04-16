@@ -1,8 +1,8 @@
 export type Unit = "inches" | "pounds";
 
 export interface Range {
-  upper: number;
-  lower: number;
+  max: number;
+  min: number;
   unit: Unit;
 }
 
@@ -12,7 +12,7 @@ export interface Sport {
 }
 
 export interface RangeParameters {
-  upper: number;
-  lower: number;
-  increment: number;
+  max: number;
+  min: number;
+  step: number;
 }

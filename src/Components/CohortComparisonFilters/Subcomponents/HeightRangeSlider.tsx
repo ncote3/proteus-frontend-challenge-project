@@ -14,15 +14,12 @@ interface Props {
 const HeightRangeSlider = (props: Props) => {
   const { range, updateRange } = props;
 
-  const feetInchesFormatter = (
-    inches: number,
-    rangeType?: "upper" | "lower"
-  ) => {
+  const feetInchesFormatter = (inches: number, rangeType?: "min" | "max") => {
     const feetCount = Math.floor(inches / INCHES_IN_FEET);
     const inchesRemainder = inches % INCHES_IN_FEET;
 
     let prefix = "Under";
-    if (rangeType === "upper") {
+    if (rangeType === "max") {
       prefix = "Over";
     }
 
@@ -37,9 +34,9 @@ const HeightRangeSlider = (props: Props) => {
       toolTipFormatter={feetInchesFormatter}
       rangeParameters={{
         // using named constants to clarify conversion
-        upper: SIX_FEET_TEN_INCHES_IN_INCHES,
-        lower: FIVE_FEET_TWO_INCHES_IN_INCHES,
-        increment: 4,
+        max: SIX_FEET_TEN_INCHES_IN_INCHES,
+        min: FIVE_FEET_TWO_INCHES_IN_INCHES,
+        step: 4,
       }}
     />
   );
