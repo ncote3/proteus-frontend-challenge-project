@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { ShowAllParameters } from "../../../types";
 
@@ -33,6 +35,7 @@ const SelectionSection = (props: Props) => {
   const titleStyles: React.CSSProperties = {
     fontWeight: "500",
     alignSelf: "flex-start",
+    fontSize: "12pt",
   };
   const optionsContainerStyles: React.CSSProperties = {
     display: "grid",
@@ -43,6 +46,26 @@ const SelectionSection = (props: Props) => {
   const radioContainerStyles: React.CSSProperties = {};
   const radioStyles: React.CSSProperties = {
     backgroundColor: "white",
+  };
+  const showMoreStyles: React.CSSProperties = {
+    fontSize: "10pt",
+    fontWeight: "500",
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    columnGap: "1em",
+  };
+  const placeHolderStyles: React.CSSProperties = {
+    fontWeight: "300",
+    fontSize: "11pt",
+  };
+  const optionsStyles: React.CSSProperties = {
+    fontWeight: "300",
+  };
+  const selectedOptionStyles: React.CSSProperties = {
+    ...optionsStyles,
+    fontWeight: "500",
   };
 
   const _renderRadios = (options: string[]) =>
@@ -57,13 +80,20 @@ const SelectionSection = (props: Props) => {
           checked={option === currentSelection}
           style={radioStyles}
         />
-        <label htmlFor={option}>{option}</label>
+        <label
+          style={
+            option === currentSelection ? selectedOptionStyles : optionsStyles
+          }
+          htmlFor={option}
+        >
+          {option}
+        </label>
       </div>
     ));
 
   const _renderOptions = () => {
     if (options.length === 0) {
-      return <div>{placeHolderMessage}</div>;
+      return <div style={placeHolderStyles}>{placeHolderMessage}</div>;
     }
 
     if (isShowAllThresholdMet) {
@@ -82,16 +112,18 @@ const SelectionSection = (props: Props) => {
 
     if (!showAll && isShowAllThresholdMet) {
       showMoreButton = (
-        <div onClick={() => setShowAll(true)}>
-          Show all {showAllParameters.showAllText}
+        <div onClick={() => setShowAll(true)} style={showMoreStyles}>
+          <FontAwesomeIcon icon={faAngleDown} />
+          <div>Show all {showAllParameters.showAllText}</div>
         </div>
       );
     }
 
     if (showAll && isShowAllThresholdMet) {
       showMoreButton = (
-        <div onClick={() => setShowAll(false)}>
-          Show less {showAllParameters.showAllText}
+        <div onClick={() => setShowAll(false)} style={showMoreStyles}>
+          <FontAwesomeIcon icon={faAngleUp} />
+          <div>Show less {showAllParameters.showAllText}</div>
         </div>
       );
     }

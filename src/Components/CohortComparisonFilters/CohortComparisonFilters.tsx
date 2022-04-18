@@ -21,9 +21,35 @@ const CohortComparisonFilters = (props: Props) => {
   const titleStyles: React.CSSProperties = {
     textAlign: "left",
   };
+  const comparisonFiltersContainerStyles: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    rowGap: "1.5em",
+  };
+  const submissionContainerStyle: React.CSSProperties = {
+    display: "flex",
+    justifyContent: "flex-end",
+    columnGap: "1.5em",
+    alignItems: "center",
+    borderTop: "1px solid lightgrey",
+    padding: "1em",
+  };
+  const cancelButtonStyles: React.CSSProperties = {
+    fontWeight: "500",
+  };
+  const submitButtonStyles: React.CSSProperties = {
+    backgroundColor: "black",
+    color: "white",
+    borderRadius: "40px",
+    paddingLeft: ".75em",
+    paddingRight: ".75em",
+    paddingTop: ".4em",
+    paddingBottom: ".4em",
+    fontSize: "11pt",
+  };
 
   return (
-    <div>
+    <div style={comparisonFiltersContainerStyles}>
       <h2 style={titleStyles}>Cohort Comparison Filters</h2>
       {/* <WeightRangeSlider range={weightRange} updateRange={updateWeightRange} />
       <HeightRangeSlider range={heightRange} updateRange={updateHeightRange} /> */}
@@ -34,7 +60,10 @@ const CohortComparisonFilters = (props: Props) => {
         selectedPosition={positionSelection}
         updateSelectedPosition={updatePositionSelection}
       />
-      <div>
+      <div style={submissionContainerStyle}>
+        <div style={cancelButtonStyles} onClick={() => console.info("Cancel")}>
+          Cancel
+        </div>
         <div
           onClick={() =>
             console.info(
@@ -44,10 +73,10 @@ const CohortComparisonFilters = (props: Props) => {
               positionSelection
             )
           }
+          style={submitButtonStyles}
         >
-          Cancel
+          Apply Filters
         </div>
-        <div onClick={() => console.info("Cancel")}>Apply Filters</div>
       </div>
     </div>
   );
