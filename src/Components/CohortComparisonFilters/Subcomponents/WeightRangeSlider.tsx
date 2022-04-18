@@ -10,6 +10,15 @@ interface Props {
 const WeightRangeSlider = (props: Props) => {
   const { range, updateRange } = props;
 
+  const weightFormatter = (weight: number, rangeType?: "min" | "max") => {
+    let prefix = "Under";
+    if (rangeType === "max") {
+      prefix = "Over";
+    }
+
+    return `${prefix} ${weight} ${range.unit}`;
+  };
+
   return (
     <RangeSlider
       title="Weight Range (lbs)"
@@ -21,6 +30,7 @@ const WeightRangeSlider = (props: Props) => {
         min: 70,
         step: 15,
       }}
+      toolTipFormatter={weightFormatter}
     />
   );
 };

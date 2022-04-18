@@ -1,4 +1,4 @@
-export type Unit = "inches" | "pounds";
+export type Unit = "inches" | "lbs";
 
 export interface Range {
   max: number;

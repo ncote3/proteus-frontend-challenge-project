@@ -20,17 +20,26 @@ const CohortComparisonFilters = (props: Props) => {
   const [positionSelection, updatePositionSelection] = useState<string>("");
 
   return (
-    <div className="comparison_filters__container">
-      <h2>Cohort Comparison Filters</h2>
-      <WeightRangeSlider range={weightRange} updateRange={updateWeightRange} />
-      <HeightRangeSlider range={heightRange} updateRange={updateHeightRange} />
-      <SportPositionSelectionSection
-        sportsList={sportsList}
-        selectedSport={sportSelection}
-        updateSelectedSport={updateSportSelection}
-        selectedPosition={positionSelection}
-        updateSelectedPosition={updatePositionSelection}
-      />
+    <div className="comparison_filters__container ">
+      <h2 className="container_header">Cohort Comparison Filters</h2>
+      <div className="scroll_bar">
+        <WeightRangeSlider
+          range={weightRange}
+          updateRange={updateWeightRange}
+        />
+        <HeightRangeSlider
+          range={heightRange}
+          updateRange={updateHeightRange}
+        />
+        <SportPositionSelectionSection
+          sportsList={sportsList}
+          selectedSport={sportSelection}
+          updateSelectedSport={updateSportSelection}
+          selectedPosition={positionSelection}
+          updateSelectedPosition={updatePositionSelection}
+        />
+      </div>
+
       <div className="submission_buttons__container">
         <div className="cancel_button" onClick={() => console.info("Cancel")}>
           Cancel

@@ -1,14 +1,14 @@
 import { Sport, Range } from "../types";
 
 export const initialWeightRange: Range = {
-  max: 0,
-  min: 0,
-  unit: "pounds",
+  max: 295,
+  min: 70,
+  unit: "lbs",
 };
 
 export const initialHeightRange: Range = {
-  max: 0,
-  min: 0,
+  max: 82,
+  min: 62,
   unit: "inches",
 };
 

@@ -30,7 +30,7 @@ const SelectionSection = (props: Props) => {
 
   const _renderRadios = (options: string[]) =>
     options.map((option) => (
-      <div className="options__container">
+      <div className="options__container" key={`div-${option}`}>
         <input
           type="radio"
           id={option}
