@@ -1,6 +1,7 @@
 import React from "react";
-import { Sport } from "../../../types";
-import SelectionSection from "../../Common/SelectionSection/SelectionSection";
+import { Sport } from "../../../../types";
+import SelectionSection from "../../../Common/SelectionSection/SelectionSection";
+import "./styles.css";
 
 interface Props {
   sportsList: Sport[];
@@ -48,14 +49,8 @@ const SportPositionSelectionSection = (props: Props) => {
     );
   };
 
-  const selectionContainerStyles: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "column",
-    rowGap: "4em",
-  };
-
   return (
-    <div style={selectionContainerStyles}>
+    <div className="sport_position_selection_section__container">
       {_renderSportSelection()}
       {_renderPositionSelection()}
     </div>

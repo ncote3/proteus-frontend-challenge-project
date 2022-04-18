@@ -1,0 +1,30 @@
+.submit_button {
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+  padding-left: .75em;
+  padding-right: .75em;
+  padding-top: .4em;
+  padding-bottom: .4em;
+  font-size: 11pt;
+  box-shadow: 2px 0px 2px red;
+}
+
+.cancel_button {
+  font-weight: 500;
+}
+
+.submission_buttons__container {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1.5em;
+  align-items: center;
+  border-top: 1px solid lightgrey;
+  padding: 1em;
+}
+
+.comparison_filters__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}

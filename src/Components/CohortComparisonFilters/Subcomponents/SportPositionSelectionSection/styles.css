@@ -1,0 +1,5 @@
+.sport_position_selection_section__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4em;
+}

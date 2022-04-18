@@ -1,0 +1,14 @@
+.range_slider__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4vw;
+  margin-bottom: 1em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12pt;
+  font-weight: 500;
+  margin-bottom: 1em;
+}

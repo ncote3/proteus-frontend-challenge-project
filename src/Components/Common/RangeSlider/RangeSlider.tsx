@@ -2,6 +2,8 @@ import React from "react";
 import InputRange from "react-input-range";
 import { Range, RangeParameters } from "../../../types";
 import "react-input-range/lib/css/index.css";
+import "./styles.css";
+import "./sliderStyles.css";
 
 interface Props {
   title: string;
@@ -17,7 +19,7 @@ const RangeSlider = (props: Props) => {
 
   const _renderHeader = () => {
     return (
-      <div>
+      <div className="header">
         <div>{title}</div>
         <div
           onClick={() =>
@@ -34,22 +36,41 @@ const RangeSlider = (props: Props) => {
     );
   };
 
-  const _handleSliderChange = (domain: readonly number[]) => {};
+  const _handleSliderFormatting = (value: number) => {
+    let formatted = `${value} ${range.unit}`;
+
+    if (toolTipFormatter) {
+      let rangeType: "min" | "max" = "min";
+
+      if (value === range.max) {
+        rangeType = "max";
+      }
+
+      formatted = toolTipFormatter(value, rangeType);
+    }
+
+    return formatted;
+  };
 
   return (
-    <div>
+    <div className="range_slider__container">
       {_renderHeader()}
-      <form style={{ margin: "0 auto", padding: "10px 30px 0" }}>
+      <form>
         <InputRange
-          maxValue={20}
-          minValue={0}
-          formatLabel={(value) => `${value} kg`}
+          maxValue={rangeParameters.max}
+          minValue={rangeParameters.min}
+          step={rangeParameters.step}
+          formatLabel={(value) => _handleSliderFormatting(value)}
           value={{
-            min: 5,
-            max: 10,
+            min: range.min,
+            max: range.max,
           }}
-          onChange={(value) => null}
-          onChangeComplete={(value) => console.log(value)}
+          onChange={(newRange) =>
+            updateRange({
+              ...range,
+              ...(newRange as { min: number; max: number }),
+            })
+          }
         />
       </form>
     </div>

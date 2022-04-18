@@ -1,0 +1,53 @@
+span span .input-range__label-container {
+  left: -50%;
+  position: relative;
+  display: block;
+  background-color: black;
+  padding: 1em 0.5em;
+  color: white;
+  border-radius: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+span span .input-range__label-container:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -3px;
+  width: 0;
+  height: 0;
+  border-top: solid 5px black;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+}
+
+span .input-range__label-container {
+  display: none;
+}
+
+.input-range__label--value {
+  position: absolute;
+  top: -4rem;
+}
+
+.input-range__track.input-range__track--active {
+  background: rgb(3, 6, 36);
+  background: linear-gradient(90deg,
+      rgba(3, 6, 36, 1) 0%,
+      rgba(28, 51, 105, 1) 54%,
+      rgba(30, 83, 154, 1) 90%,
+      rgba(67, 114, 158, 1) 100%);
+}
+
+.input-range__slider {
+  background: white;
+  border: 2px solid #030624;
+  margin-top: -0.85rem;
+}
+
+.input-range__track {
+  height: .5rem;
+}

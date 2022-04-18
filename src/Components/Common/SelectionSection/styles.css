@@ -1,0 +1,46 @@
+.radio__container {
+  background-color: white;
+}
+
+.placeholder {
+  color: grey;
+  font-size: 11pt;
+}
+
+.show_more {
+  font-size: 12pt;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.options__container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: start;
+  row-gap: .5em;
+}
+
+.options__element {
+  color: "grey",
+}
+
+.options__element--selected {
+  color: black;
+  font-weight: 500;
+}
+
+.title {
+  font-weight: 500;
+  align-self: flex-start;
+  font-size: 12pt;
+}
+
+.selection_section {
+  display: flex;
+  flex-direction: column;
+  row-gap: .75em;
+}
