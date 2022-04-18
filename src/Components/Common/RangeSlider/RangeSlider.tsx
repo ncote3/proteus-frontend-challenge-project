@@ -1,9 +1,7 @@
 import React from "react";
-import { Handles, Rail, Slider, Tracks } from "react-compound-slider";
+import InputRange from "react-input-range";
 import { Range, RangeParameters } from "../../../types";
-import Handle from "./Subcomponents/Handle";
-import SliderRail from "./Subcomponents/SliderRail";
-import Track from "./Subcomponents/Track";
+import "react-input-range/lib/css/index.css";
 
 interface Props {
   title: string;
@@ -16,11 +14,6 @@ interface Props {
 const RangeSlider = (props: Props) => {
   const { title, rangeParameters, range, updateRange, toolTipFormatter } =
     props;
-
-  const sliderStyle = {
-    position: "relative" as "relative",
-    width: "100%",
-  };
 
   const _renderHeader = () => {
     return (
@@ -46,50 +39,19 @@ const RangeSlider = (props: Props) => {
   return (
     <div>
       {_renderHeader()}
-      <Slider
-        mode={2}
-        step={rangeParameters.step}
-        domain={[rangeParameters.min, rangeParameters.max]}
-        rootStyle={sliderStyle}
-        onChange={_handleSliderChange}
-        values={[range.max, range.min]}
-      >
-        {/* @ts-ignore*/}
-        <Rail>
-          {({ getRailProps }) => <SliderRail getRailProps={getRailProps} />}
-        </Rail>
-        {/* @ts-ignore */}
-        <Handles>
-          {({ handles, activeHandleID, getHandleProps }) => (
-            <div className="slider-handles">
-              {handles.map((handle) => (
-                <Handle
-                  key={handle.id}
-                  handle={handle}
-                  domain={[rangeParameters.min, rangeParameters.max]}
-                  isActive={handle.id === activeHandleID}
-                  getHandleProps={getHandleProps}
-                />
-              ))}
-            </div>
-          )}
-        </Handles>
-        {/* @ts-ignore */}
-        <Tracks left={false} right={false}>
-          {({ tracks, getTrackProps }) => (
-            <div className="slider-tracks">
-              {tracks.map(({ id, source, target }) => (
-                <Track
-                  key={id}
-                  source={source}
-                  target={target}
-                  getTrackProps={getTrackProps}
-                />
-              ))}
-            </div>
-          )}
-        </Tracks>
-      </Slider>
+      <form style={{ margin: "0 auto", padding: "10px 30px 0" }}>
+        <InputRange
+          maxValue={20}
+          minValue={0}
+          formatLabel={(value) => `${value} kg`}
+          value={{
+            min: 5,
+            max: 10,
+          }}
+          onChange={(value) => null}
+          onChangeComplete={(value) => console.log(value)}
+        />
+      </form>
     </div>
   );
 };

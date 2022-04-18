@@ -51,8 +51,8 @@ const CohortComparisonFilters = (props: Props) => {
   return (
     <div style={comparisonFiltersContainerStyles}>
       <h2 style={titleStyles}>Cohort Comparison Filters</h2>
-      {/* <WeightRangeSlider range={weightRange} updateRange={updateWeightRange} />
-      <HeightRangeSlider range={heightRange} updateRange={updateHeightRange} /> */}
+      <WeightRangeSlider range={weightRange} updateRange={updateWeightRange} />
+      <HeightRangeSlider range={heightRange} updateRange={updateHeightRange} />
       <SportPositionSelectionSection
         sportsList={sportsList}
         selectedSport={sportSelection}
