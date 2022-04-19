@@ -1,0 +1,110 @@
+commit 59019465c0b84c2f63e5c33e7382d368098335d7
+Author: Noah <noah.cote3@gmail.com>
+Date:   Mon Apr 18 20:40:08 2022 -0400
+
+    Added some basic tests
+    FIxed broken package file
+
+commit a6dd7113643eb278ca5b62b1d516dd27caae73a6
+Author: Noah <noah.cote3@gmail.com>
+Date:   Mon Apr 18 19:45:43 2022 -0400
+
+    More styling and fixing up
+
+commit f9455a76edf064558a538d694563611b9e7ba855
+Author: Noah <noah.cote3@gmail.com>
+Date:   Mon Apr 18 18:50:28 2022 -0400
+
+    Pulled out CSS-in-JS to CSS
+
+commit 722b5e8a33c761f50fdd5e67254d1bb1cfcceaae
+Author: Noah <noah.cote3@gmail.com>
+Date:   Mon Apr 18 08:38:00 2022 -0400
+
+    Added working two handled range slider package
+
+commit c3625097fee8c7ff05eafb29406aa4143dceee91
+Author: Noah <noah.cote3@gmail.com>
+Date:   Mon Apr 18 08:17:21 2022 -0400
+
+    More styling and icons
+
+commit ca3efdabaf4972e3ee3806d1f9f4a5768c726a19
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 19:59:36 2022 -0400
+
+    adding some styles
+
+commit c8e7398af144005993c8d13c3f609e973642b725
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 14:44:39 2022 -0400
+
+    WIP Selection Section
+
+commit b2ca47353b19fc83308015467c4459abbcf4d1c4
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 10:24:24 2022 -0400
+
+    WIP Common range slider uses react-compound-slider
+
+commit 38d8801976a53a9a1a03ec41c8b614b6ebb712f5
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 09:01:11 2022 -0400
+
+    WIP Common Range Slider
+
+commit 0b3c5ea57be72617a0c75b52e714e1715efb94dd
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 08:38:12 2022 -0400
+
+    Rigged up CohortComparisonFilters components
+
+commit 184074ed1f6b396f2b6eb1058e00b0d24aa7a5b7
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 07:44:51 2022 -0400
+
+    More Component Orchestrating
+
+commit da606a0d61dd5ba85200042e47a602a2a4b7e0d9
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 07:18:06 2022 -0400
+
+    Initital component structure and types
+
+commit 4fb65997b350cb5b7fa685efefad56c98d00f735
+Author: Noah <noah.cote3@gmail.com>
+Date:   Sat Apr 16 06:45:52 2022 -0400
+
+    Initial CRA generation
+
+commit 9b26695b1e22b2511d4dbe508cb168a272d8f56b
+Author: jasonshaev <jasonshaev@users.noreply.github.com>
+Date:   Fri Apr 8 12:44:56 2022 -0400
+
+    Update README.md
+
+commit 368e5a7b98759e3c9e91b903f99f4ac2ccba53f8
+Author: jasonshaev <jasonshaev@users.noreply.github.com>
+Date:   Tue Apr 5 14:43:57 2022 -0400
+
+    Update README.md
+
+commit e88d8c8e4dd12ae3ea2fe9afe698450e2657a8cc
+Author: jasonshaev <jasonshaev@users.noreply.github.com>
+Date:   Wed Mar 30 19:59:45 2022 -0400
+
+    Update README.md
+    
+    Typo in README
+
+commit 072d6530b60966c077702beec66855048df769f0
+Author: jasonshaev <jasonshaev@users.noreply.github.com>
+Date:   Wed Mar 30 10:51:26 2022 -0400
+
+    Update README.md
+
+commit 75b20614bcc96e4ea0812983efebe74e2ca6710c
+Author: jasonshaev <jasonshaev@users.noreply.github.com>
+Date:   Wed Mar 30 10:28:51 2022 -0400
+
+    Initial commit
